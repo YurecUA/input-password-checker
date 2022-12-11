@@ -1,0 +1,60 @@
+.container h2 {
+  color: $main-color;
+  font-weight: 500;
+}
+
+.container .inputBox {
+  position: relative;
+  width: 100%;
+}
+
+.container .inputBox input {
+  position: relative;
+  width: 100%;
+  background: $main-color;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: $accessory-color;
+  font-size: 1.1em;
+}
+
+.container .strengthMeter {
+  position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 3px;
+background: $main-color;
+}
+
+.container .strengthMeter::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  transition: $cubic;
+  background: $hover-color;
+}
+
+.show {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: $contacts-color;
+  border: 6px solid $main-color;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show::before {
+  content: 'Show';
+  font-size: 0.6em;
+  color: $accessory-color;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
