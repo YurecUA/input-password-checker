@@ -33,8 +33,51 @@ background: $main-color;
   position: absolute;
   width: 0;
   height: 100%;
-  transition: $cubic;
-  background: $hover-color;
+  transition: 1000ms;
+}
+
+.container.weak .strengthMeter::before {
+  width: 33.33%;
+  background: $weak;
+  filter: drop-shadow(0 0 1px $weak) drop-shadow(0 0 2px $weak) drop-shadow(0 0 4px $weak);
+}
+
+.container.medium .strengthMeter::before {
+  width: 66.66%;
+  background: $medium;
+  filter: drop-shadow(0 0 1px $medium) drop-shadow(0 0 2px $medium) drop-shadow(0 0 4px $medium);
+}
+
+.container.strong .strengthMeter::before {
+  width: 100%;
+  background: $strong;
+  filter: drop-shadow(0 0 1px $strong) drop-shadow(0 0 2px $strong) drop-shadow(0 0 4px $strong);
+}
+
+.container .strengthMeter::after {
+  position: absolute;
+  top: -45px;
+  left: 30px;
+  color: $accessory-color;
+  transition: 1000ms;
+}
+
+.container.weak .strengthMeter::after {
+  content: 'Your Password Is Weak';
+  color: $weak;
+  filter: drop-shadow(0 0 4px $weak);
+}
+
+.container.medium .strengthMeter::after {
+  content: 'Your Password Is Medium';
+  color: $medium;
+  filter: drop-shadow(0 0 4px $medium);
+}
+
+.container.strong .strengthMeter::after {
+  content: 'Your Password Is Strong';
+  color: $strong;
+  filter: drop-shadow(0 0 4px $strong);
 }
 
 .show {
@@ -43,7 +86,7 @@ background: $main-color;
   right: 0;
   width: 60px;
   height: 100%;
-  background: $contacts-color;
+  background: $background-color;
   border: 6px solid $main-color;
   cursor: pointer;
   display: flex;
@@ -57,4 +100,8 @@ background: $main-color;
   color: $accessory-color;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+.show.hide::before {
+  content: 'Hide';
 }
