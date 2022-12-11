@@ -21,7 +21,7 @@ body {
   position: relative;
   width: 400px;
   padding: 30px;
-  background: $contacts-color;
+  background: $background-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,14 +45,14 @@ body {
   }
 }
 
-.visually-hidden {
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
+// .visually-hidden {
+//   white-space: nowrap;
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+//   border: 0;
+//   padding: 0;
+//   clip: rect(0 0 0 0);
+//   clip-path: inset(50%);
+//   margin: -1px;
+// }
